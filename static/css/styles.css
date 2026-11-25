@@ -226,3 +226,94 @@ footer {
     justify-content: center;
   }
 }
+
+/* =========================================
+   DISEÑO RESPONSIVO (Tablets y Celulares)
+   ========================================= */
+
+/* 1. Tablas responsivas (evita que se desborden en celulares) */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 2. Formularios e Inputs adaptables */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form select,
+form textarea {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.65rem 0.9rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem; /* Evita zoom automático en iPhone */
+  margin-bottom: 1rem;
+}
+
+/* 3. Ajustes para Tablets (hasta 768px) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  header nav {
+    justify-content: center;
+    gap: 0.85rem;
+  }
+
+  .container {
+    margin: 1.25rem auto;
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+/* 4. Ajustes para Celulares pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.6rem;
+  }
+
+  header nav a,
+  header nav form,
+  .btn-danger {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  /* Botones de acción en formularios ocupan todo el ancho */
+  .card .btn,
+  form .btn {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  th, td {
+    padding: 0.65rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  footer {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
