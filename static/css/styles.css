@@ -1,0 +1,13 @@
+:root {
+--color-primary: #020755;
+--color-secondary: #00FFCC;
+--color-bg: #FFFFFF;
+
+--color-text: #FFFFFF;
+--radius: 8px;
+--space: 1rem;
+}
+
+@media (max-width: 768px) {
+/* menú colapsado, tablas en tarjetas, etc. */
+}
