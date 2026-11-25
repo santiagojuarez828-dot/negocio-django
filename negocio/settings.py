@@ -121,11 +121,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Si usas WhiteNoise, usa esta opción menos estricta para evitar errores 500:
+# Agrega estas 3 líneas para que Django encuentre la carpeta static de la raíz:
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 
 MAILERS = {
     'default': {
